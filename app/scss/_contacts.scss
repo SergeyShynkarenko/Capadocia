@@ -1,0 +1,70 @@
+.contacts {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__date,
+    &__price {
+        font-family: 'balqis';
+        font-size: 96px;
+        color: $accent;
+        line-height: 100px;
+        font-weight: 300;
+        span {
+            display: block;
+            margin-top: -10px;
+            font-size: 24px;
+            line-height: 28px;
+            color: $textcolor;
+            font-family: 'RobotoCondensed-LightItalic';
+            margin-left: 205px;
+        }
+    }
+    &__date {
+        margin-bottom: 20px;
+    }
+    &__price {
+        margin-left: 120px;
+    }
+    &__form {
+        max-width: 383px;
+        margin: 0 auto;
+        &-title {
+            margin-bottom: 50px;
+            font-size: 24px;
+            line-height: 28px;
+            font-family: 'RobotoCondensed-Regular';
+        }
+        &-input {
+            border: 1px solid $accent;
+            display: block;
+            margin-bottom: 20px;
+            height: 50px;
+            width: 100%;
+            padding: 0 31px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            font-family: 'RobotoCondensed-Light';
+            &::placeholder {
+                color: $textcolor;
+            }
+        }
+        &-btn {
+            font-family: 'RobotoCondensed-Light';
+            line-height: 28px;
+            font-size: 24px;
+            text-transform: uppercase;
+            border: 1px solid $accent;
+            background-color: transparent;
+            padding: 11px 45px;
+            cursor: pointer;
+        }
+    }
+}

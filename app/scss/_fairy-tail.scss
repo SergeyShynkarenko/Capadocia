@@ -1,0 +1,58 @@
+.slick {
+    &-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+	    z-index: 5;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    &-prev {
+	    left: 0;
+    }
+
+    &-next {
+	    right: 0;
+    }
+}
+.fairy-tail {
+    &__slider {
+	    width: 50%;
+    }
+    &__inner {
+	    position: relative;
+    }
+    &__container {
+        position: absolute;
+        max-width: 1230px;
+        padding: 0 15px;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &__body {
+        width: 50%;
+        margin-left: auto;
+        padding-left: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        &-title {
+            font-family: 'RobotoCondensed-Regular';
+        }
+    }
+    &__text {
+        padding: 10px 0;
+    }
+    &__title {
+        span { 
+            margin-left: 185px;
+        }
+    }
+}

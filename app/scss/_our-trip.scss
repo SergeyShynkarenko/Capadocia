@@ -1,0 +1,51 @@
+.our-trip {
+    &__slider {
+        width: 50%;
+        margin-left: auto;
+    }
+    &__inner {
+        position: relative;
+    }
+    &__container {
+        max-width: 1230px;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &__title {
+        span { 
+            margin-left: 250px;
+        }
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        height: 100%;
+    }
+    &__list {
+        margin: 5px 0;
+        font-size: 24px;
+        line-height: 28px;
+        li:first-child {
+            margin-bottom: 20px;
+            font-family: 'RobotoCondensed-Regular';
+        }
+    }
+    &__btn {
+        font-family: 'RobotoCondensed-Light'; 
+        font-size: 24px;
+        line-height: 28px; 
+        border: 1px solid $accent;;
+        padding: 11px 53px; 
+    }
+    &__content {
+        width: 50%;
+        padding-right: 55px;
+    }
+
+}

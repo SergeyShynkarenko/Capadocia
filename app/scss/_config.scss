@@ -1,21 +1,10 @@
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
-$fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
+$accent: #e2ab3f; // Accent Color
+$fontsize: 18px; // Body Font Size
+$textcolor: #000; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$roboto: Roboto, sans-serif; // Roboto Font Family
-
-// Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 20px;
-$gutter: $grid-gutter-width;
-
-// IMPORT SECTION
-
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
+$roboto: RobotoCondensed-Light, sans-serif; // Roboto Font Family
 
 // FONTS LOAD SECTION
 
@@ -29,10 +18,11 @@ $gutter: $grid-gutter-width;
 	}
 }
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+@include font('balqis',normal, 300, '../fonts/balqis.woff');
+@include font('RobotoCondensed-Light',normal, 300, '../fonts/RobotoCondensed-Light.woff');
+@include font('RobotoCondensed-LightItalic',italic, 300, '../fonts/RobotoCondensed-LightItalic.woff');
+@include font('RobotoCondensed-Regular',normal, 400, '../fonts/RobotoCondensed-Regular.woff');
+
 
 // GENERAL DOCUMENT STYLES
 
@@ -47,8 +37,14 @@ $gutter: $grid-gutter-width;
 
 input, textarea {
 	outline: none;
-	&:focus:required:invalid { border-color: red }
+	&:focus:required:invalid { border-color: $textcolor }
 	&:required:valid { border-color: green }
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
 body {
@@ -56,7 +52,45 @@ body {
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
+	line-height: 21px;
 	overflow-x: hidden;
 	color: $textcolor;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;	
+}
+
+.page-section {
+	margin: 200px auto;
+	max-width: 1920px;
+}
+
+.title {
+	font-size: 96px;
+	line-height: 128px;
+	color: $accent;
+	font-family: 'balqis';
+	font-weight: 300;
+	margin-bottom: 100px;
+}
+
+.title span {
+	line-height: 28px;
+	font-size: 24px;
+	color: $textcolor;
+	font-family: 'RobotoCondensed-LightItalic';
+	display: block;
+	margin-top: -30px;
 }
